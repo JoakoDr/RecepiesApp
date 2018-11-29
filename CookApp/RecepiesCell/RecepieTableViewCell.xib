@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recepieCell" rowHeight="107" id="KGk-i7-Jjw" customClass="RecepieTableViewCell" customModule="CookApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="106.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1zv-un-BOy">
+                        <rect key="frame" x="16" y="29" width="52" height="49"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXM-A4-57O">
+                        <rect key="frame" x="84" y="6" width="97" height="26"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdL-M9-EcE">
+                        <rect key="frame" x="84" y="37" width="220" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="220" id="H2A-6z-b78"/>
+                            <constraint firstAttribute="height" constant="32" id="auD-FE-W0Y"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWL-4z-hBH">
+                        <rect key="frame" x="84" y="71" width="74" height="35"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NdL-M9-EcE" firstAttribute="leading" secondItem="QXM-A4-57O" secondAttribute="leading" id="0ZH-DS-Hdh"/>
+                    <constraint firstItem="AWL-4z-hBH" firstAttribute="top" secondItem="NdL-M9-EcE" secondAttribute="bottom" constant="2" id="Aks-1f-BzG"/>
+                    <constraint firstItem="1zv-un-BOy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="18" id="Bba-Dv-aym"/>
+                    <constraint firstItem="1zv-un-BOy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="HJh-Hj-DUk"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="NdL-M9-EcE" secondAttribute="trailing" constant="13" id="WRT-Nh-hsm"/>
+                    <constraint firstItem="NdL-M9-EcE" firstAttribute="leading" secondItem="1zv-un-BOy" secondAttribute="trailing" constant="16" id="aNr-1y-YqR"/>
+                    <constraint firstItem="NdL-M9-EcE" firstAttribute="centerY" secondItem="1zv-un-BOy" secondAttribute="centerY" id="bLu-aW-c2N"/>
+                    <constraint firstItem="NdL-M9-EcE" firstAttribute="leading" secondItem="AWL-4z-hBH" secondAttribute="leading" id="mD9-pB-KXx"/>
+                    <constraint firstItem="NdL-M9-EcE" firstAttribute="top" secondItem="QXM-A4-57O" secondAttribute="bottom" constant="5" id="szy-EP-HVJ"/>
+                    <constraint firstItem="NdL-M9-EcE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vKc-cU-O4F"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgRecepie" destination="1zv-un-BOy" id="5rE-25-1SK"/>
+                <outlet property="lblCreator" destination="AWL-4z-hBH" id="8sp-De-dXN"/>
+                <outlet property="lblIngredients" destination="NdL-M9-EcE" id="gLm-ll-vYr"/>
+                <outlet property="lblTitle" destination="QXM-A4-57O" id="TNZ-ct-nyc"/>
+            </connections>
+            <point key="canvasLocation" x="85.5" y="91.5"/>
+        </tableViewCell>
+    </objects>
+</document>
