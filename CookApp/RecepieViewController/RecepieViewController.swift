@@ -99,13 +99,18 @@ extension RecepieViewController: UITableViewDelegate,UITableViewDataSource
         let recepie2: Recepies
         if isFiltering() {
             recepie2 = filteredCandies[indexPath.row]
+            cell.lblTitle?.text = recepie2.title
+            cell.lblIngredients?.text = recepie2.ingredients
+            cell.lblCreator?.text = recepie2.creator
+            cell.imgRecepie?.sd_setImage(with: URL(string: recepie2.img)!, completed: nil)
         } else {
             recepie2 = recepies[indexPath.row]
+            cell.lblTitle?.text = recepie2.title
+            cell.lblIngredients?.text = recepie2.ingredients
+            cell.lblCreator?.text = recepie2.creator
+            cell.imgRecepie?.sd_setImage(with: URL(string: recepie2.img)!, completed: nil)
         }
-        cell.lblTitle?.text = recepie.title
-        cell.lblIngredients?.text = recepie.ingredients
-        cell.lblCreator?.text = recepie.creator
-        cell.imgRecepie?.sd_setImage(with: URL(string: recepie.img)!, completed: nil)
+        
         
         return cell
     }

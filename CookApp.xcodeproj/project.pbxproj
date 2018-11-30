@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		90EEE6C083A5217A4128F983 /* Pods_CookAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549828A22BDB55AF189669A6 /* Pods_CookAppUITests.framework */; };
+		A4154B5921B13FDB00A55172 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4154B5721B13FDB00A55172 /* MapViewController.swift */; };
+		A4154B5A21B13FDB00A55172 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4154B5821B13FDB00A55172 /* MapViewController.xib */; };
 		A4492BD021AEA2280052BBDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4492BCF21AEA2280052BBDB /* AppDelegate.swift */; };
 		A4492BD221AEA2280052BBDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4492BD121AEA2280052BBDB /* ViewController.swift */; };
 		A4492BD721AEA22B0052BBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4492BD621AEA22B0052BBDB /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		7B346D92696B3B458B586BF0 /* Pods-CookAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookAppUITests/Pods-CookAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81D79A0440AAF5F0B2B19CC8 /* Pods-CookAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookAppUITests/Pods-CookAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		982C485701D71E8D82ECBDB8 /* Pods_CookApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4154B5721B13FDB00A55172 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A4154B5821B13FDB00A55172 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		A4492BCC21AEA2280052BBDB /* CookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4492BCF21AEA2280052BBDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4492BD121AEA2280052BBDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A4154B5621B13FA700A55172 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4154B5721B13FDB00A55172 /* MapViewController.swift */,
+				A4154B5821B13FDB00A55172 /* MapViewController.xib */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
 		A4492BC321AEA2280052BBDB = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +172,7 @@
 		A4492BCE21AEA2280052BBDB /* CookApp */ = {
 			isa = PBXGroup;
 			children = (
+				A4154B5621B13FA700A55172 /* MapViewController */,
 				A4492C1621AECB1F0052BBDB /* DetailViewController */,
 				A4492C1121AEC42F0052BBDB /* RecepiesCell */,
 				A4492C0C21AEC1D40052BBDB /* RecepieViewController */,
@@ -357,6 +371,7 @@
 				A4492C1A21AECB3D0052BBDB /* DetailsViewController.xib in Resources */,
 				A4492BDA21AEA22B0052BBDB /* LaunchScreen.storyboard in Resources */,
 				A4492BD721AEA22B0052BBDB /* Assets.xcassets in Resources */,
+				A4154B5A21B13FDB00A55172 /* MapViewController.xib in Resources */,
 				A4492C0121AEA2CC0052BBDB /* CategoryViewController.xib in Resources */,
 				A4492C1521AEC4520052BBDB /* RecepieTableViewCell.xib in Resources */,
 				A4492C0621AEA48B0052BBDB /* CategoryTableViewCell.xib in Resources */,
@@ -463,6 +478,7 @@
 				A4492C0921AEA7380052BBDB /* Category.swift in Sources */,
 				A4492C0B21AEB4610052BBDB /* Recepies.swift in Sources */,
 				A4492C1921AECB3D0052BBDB /* DetailsViewController.swift in Sources */,
+				A4154B5921B13FDB00A55172 /* MapViewController.swift in Sources */,
 				A4492BD221AEA2280052BBDB /* ViewController.swift in Sources */,
 				A4492C0F21AEC1F50052BBDB /* RecepieViewController.swift in Sources */,
 				A4492C0021AEA2CC0052BBDB /* CategoryViewController.swift in Sources */,

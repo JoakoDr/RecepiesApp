@@ -8,7 +8,7 @@
 
 import UIKit
 import SDWebImage
-import MapKit
+
 
 class DetailsViewController: UIViewController {
     
@@ -17,8 +17,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var mainImageView : UIImageView!
     @IBOutlet weak var lblIngredients : UILabel!
     @IBOutlet weak var lblCreator : UILabel!
-    @IBOutlet weak var mapView : MKMapView!
-    internal var location : CLLocation!
+   
     
     
     
@@ -28,7 +27,7 @@ class DetailsViewController: UIViewController {
     {
         self.init()
         self.recepies = recepies
-        location = CLLocation(latitude: recepies.latitude, longitude: recepies.latitude)
+        
     }
 
     override func viewDidLoad() {
@@ -38,13 +37,6 @@ class DetailsViewController: UIViewController {
         lblIngredients.text = recepies.ingredients
         lblCreator.text = recepies.creator
         mainImageView?.sd_setImage(with: URL(string: recepies.img)!, completed: nil)
-        let pin:MKPointAnnotation = MKPointAnnotation()
-        pin.title = recepies.title
-        pin.coordinate = (location?.coordinate)!
-        mapView.addAnnotation(pin)
-        let regionToShow = MKCoordinateRegionMakeWithDistance((location?.coordinate)!, 2000, 2000)
-        mapView.setRegion(regionToShow, animated: true)
-        
         // Do any additional setup after loading the view.
     }
 
@@ -52,19 +44,13 @@ class DetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard annotation is MKPointAnnotation else { return nil }
+
+    @IBAction func onClick(_ sender: Any) {
         
-        let identifier = "Annotation"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-        
-        if annotationView == nil {
-            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            annotationView!.canShowCallout = true
-        } else {
-            annotationView!.annotation = annotation
-        }
-        
-        return annotationView
+        let myRecepie = recepies
+        let detailsVC = MapViewController(recepies: myRecepie!)
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
-}
+    
+    }
+
