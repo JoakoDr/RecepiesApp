@@ -36,55 +36,55 @@ class CategoryViewController: UIViewController {
     private func loadArray()
     {
          var recipiesMeat: [Recepies] = []
-        let bbqMeat = Recepies(imgURL: "https://api.adorable.io/avatars/200/90197d80116b41c83618598cd8b7fc47.png", lblTitle1: "BBQ Meat", ingredients: "BBQ,Meat,Bread", creator: "Joaquin")
-        let cheeseFries = Recepies(imgURL: "https://api.adorable.io/avatars/200/10197d80116b41c83618598cd8b7fc47.png", lblTitle1: "Cheese Fries", ingredients: "Cheese,Fries,Bacon", creator: "Foster")
-        let shet = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197d80116b41c83618598cd8b7fc47.png", lblTitle1: "shet", ingredients: "Fish and Fries", creator: "England")
-        let fries = Recepies(imgURL: "https://api.adorable.io/avatars/200/40197d80116b41c83618598cd8b7fc47.png", lblTitle1: "Fries", ingredients: "Fries", creator: "Joaquin")
+        let bbqMeat = Recepies(imgURL: "https://api.adorable.io/avatars/200/90197d80116b41c83618598cd8b7fc47.png", lblTitle1: "BBQ Meat", ingredients: "BBQ,Meat,Bread", creator: "Joaquin", latitude: -3.41, longitude: 41.23)
+        let cheeseFries = Recepies(imgURL: "https://api.adorable.io/avatars/200/10197d80116b41c83618598cd8b7fc47.png", lblTitle1: "Cheese Fries", ingredients: "Cheese,Fries,Bacon", creator: "Foster", latitude: -3.49, longitude: 42.32)
+        let shet = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197d80116b41c83618598cd8b7fc47.png", lblTitle1: "shet", ingredients: "Fish and Fries", creator: "England", latitude: -3.298, longitude: 41.32)
+        let fries = Recepies(imgURL: "https://api.adorable.io/avatars/200/40197d80116b41c83618598cd8b7fc47.png", lblTitle1: "Fries", ingredients: "Fries", creator: "Joaquin", latitude: -3.23, longitude: 42.11)
         recipiesMeat.append(bbqMeat)
         recipiesMeat.append(cheeseFries)
         recipiesMeat.append(shet)
         recipiesMeat.append(fries)
         
         var recipiesFish: [Recepies] = []
-        let swordFish = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197d80116b41c83618598cd8b7fc47.png", lblTitle1: "Sword Fish", ingredients: "Fish and Fries", creator: "England")
+        let swordFish = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197d80116b41c83618598cd8b7fc47.png", lblTitle1: "Sword Fish", ingredients: "Fish and Fries", creator: "England", latitude: -3.11, longitude: 43.222)
         recipiesFish.append(swordFish)
         
         var recipiesBirds: [Recepies] = []
-        let roastChicken = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd8b7fc47.png", lblTitle1: "Roast Chicken", ingredients: "Chicken,Fries,Sauce", creator: "EEUU")
-         let eagle = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd8b7fc47.png", lblTitle1: "Real Eagle", ingredients: "Eagle,Fries,Sauce", creator: "EEUU-Joako")
-         let penguin = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd8b7fc47.png", lblTitle1: "Roast Chicken", ingredients: "Penguin,Fries,Sauce", creator: "EEUU-LA")
+        let roastChicken = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd8b7fc47.png", lblTitle1: "Roast Chicken", ingredients: "Chicken,Fries,Sauce", creator: "EEUU", latitude: -3.222, longitude: 41.222)
+         let eagle = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd8b7fc47.png", lblTitle1: "Real Eagle", ingredients: "Eagle,Fries,Sauce", creator: "EEUU-Joako", latitude: -3.012, longitude: 43.54)
+         let penguin = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd8b7fc47.png", lblTitle1: "Roast Chicken", ingredients: "Penguin,Fries,Sauce", creator: "EEUU-LA", latitude: -3.45, longitude: 42.34)
         recipiesBirds.append(roastChicken)
         recipiesBirds.append(eagle)
         recipiesBirds.append(penguin)
         
         var recipiesVegetables: [Recepies] = []
-        let lettuce = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd8b7fc47.png", lblTitle1: "Lettuce with Mushrooms", ingredients: "Lettuce,Mushrooms,Sauce", creator: "EEUU")
-        let puerrs = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd8b7fc47.png", lblTitle1: "Puerrs", ingredients: "Puerrs,Lettuce,Sauce", creator: "EEUU-Joako")
+        let lettuce = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd8b7fc47.png", lblTitle1: "Lettuce with Mushrooms", ingredients: "Lettuce,Mushrooms,Sauce", creator: "EEUU", latitude: -3.23, longitude: 43.55)
+        let puerrs = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd8b7fc47.png", lblTitle1: "Puerrs", ingredients: "Puerrs,Lettuce,Sauce", creator: "EEUU-Joako", latitude: -3.34, longitude: 43.55)
         recipiesVegetables.append(lettuce)
         recipiesVegetables.append(puerrs)
         
         var recipiesSalads: [Recepies] = []
-        let caesarSalad = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197884116b41c83618598cd8b7fc47.png", lblTitle1: "Ensalada Caesar", ingredients: "Lettuce,Chicken,oil", creator: "Caesar")
-        let mixSalad = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd7b7fc47.png", lblTitle1: "Ensalada Mixta", ingredients: "Corn,Lettuce,Tomato,Egg", creator: "Mix")
+        let caesarSalad = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197884116b41c83618598cd8b7fc47.png", lblTitle1: "Ensalada Caesar", ingredients: "Lettuce,Chicken,oil", creator: "Caesar", latitude: -3.56, longitude: 42.34)
+        let mixSalad = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd7b7fc47.png", lblTitle1: "Ensalada Mixta", ingredients: "Corn,Lettuce,Tomato,Egg", creator: "Mix", latitude: -3.28, longitude: 42.82)
         recipiesSalads.append(caesarSalad)
         recipiesSalads.append(mixSalad)
         
         var recipiesPaste: [Recepies] = []
-        let carbonara = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197884116b41c83618298cd8b7fc47.png", lblTitle1: "Carbonara", ingredients: "Spaghetti,milk,cheese,bacon", creator: "Italia")
-        let bolognesa = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd7b7fc47.png", lblTitle1: "Bolognesa", ingredients: "Spaghetti,tomato,cheese,meat", creator: "Italia")
+        let carbonara = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197884116b41c83618298cd8b7fc47.png", lblTitle1: "Carbonara", ingredients: "Spaghetti,milk,cheese,bacon", creator: "Italia", latitude: -3.56, longitude: 42.3454)
+        let bolognesa = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880116b41c83618598cd7b7fc47.png", lblTitle1: "Bolognesa", ingredients: "Spaghetti,tomato,cheese,meat", creator: "Italia", latitude: -3.4555, longitude: 43.233)
         recipiesPaste.append(carbonara)
         recipiesPaste.append(bolognesa)
         
         
         var recipiesSopes: [Recepies] = []
-        let sopes = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197884116b41c83218298cd8b7fc47.png", lblTitle1: "Sope", ingredients: "Noodles,Chickpeas", creator: "China")
-        let galegoCald = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880112b41c83618598cd7b7fc47.png", lblTitle1: "Galego Cald", ingredients: "Noodles,potatoes,soup,Tomate Soup ", creator: "Italia")
+        let sopes = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197884116b41c83218298cd8b7fc47.png", lblTitle1: "Sope", ingredients: "Noodles,Chickpeas", creator: "China", latitude: -3.657, longitude: 43.676)
+        let galegoCald = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197880112b41c83618598cd7b7fc47.png", lblTitle1: "Galego Cald", ingredients: "Noodles,potatoes,soup,Tomate Soup ", creator: "Italia", latitude: -3.4555, longitude: 42.56666)
         recipiesSopes.append(sopes)
         recipiesSopes.append(galegoCald)
         
         
         var recipiesDesserts: [Recepies] = []
-        let cheesecake = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197884122b41c83218298cd8b7fc47.png", lblTitle1: "CheeseCake", ingredients: "Cake,Cheese", creator: "Hagen-Daz")
+        let cheesecake = Recepies(imgURL: "https://api.adorable.io/avatars/200/30197884122b41c83218298cd8b7fc47.png", lblTitle1: "CheeseCake", ingredients: "Cake,Cheese", creator: "Hagen-Daz", latitude: -3.23, longitude: 42.55)
         recipiesDesserts.append(cheesecake)
         
         

@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import MapKit
 
 class DetailsViewController: UIViewController {
     
@@ -16,11 +17,18 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var mainImageView : UIImageView!
     @IBOutlet weak var lblIngredients : UILabel!
     @IBOutlet weak var lblCreator : UILabel!
+    @IBOutlet weak var mapView : MKMapView!
+    internal var location : CLLocation!
+    
+    
+    
+    
     
     convenience init(recepies: Recepies)
     {
         self.init()
         self.recepies = recepies
+        location = CLLocation(latitude: recepies.latitude, longitude: recepies.latitude)
     }
 
     override func viewDidLoad() {
@@ -30,6 +38,12 @@ class DetailsViewController: UIViewController {
         lblIngredients.text = recepies.ingredients
         lblCreator.text = recepies.creator
         mainImageView?.sd_setImage(with: URL(string: recepies.img)!, completed: nil)
+        let pin:MKPointAnnotation = MKPointAnnotation()
+        pin.title = recepies.title
+        pin.coordinate = (location?.coordinate)!
+        mapView.addAnnotation(pin)
+        let regionToShow = MKCoordinateRegionMakeWithDistance((location?.coordinate)!, 2000, 2000)
+        mapView.setRegion(regionToShow, animated: true)
         
         // Do any additional setup after loading the view.
     }
@@ -38,16 +52,19 @@ class DetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation is MKPointAnnotation else { return nil }
+        
+        let identifier = "Annotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView!.canShowCallout = true
+        } else {
+            annotationView!.annotation = annotation
+        }
+        
+        return annotationView
     }
-    */
-
 }
